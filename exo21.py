@@ -1,19 +1,9 @@
 def length(lst):
-    """
-    Returns the number of elements in the list.
-    :param lst: List of elements.
-    :return: Integer count of elements.
-    """
     if not isinstance(lst, list):
         raise TypeError("Input must be a list.")
     return len(lst)
 
 def mean(lst):
-    """
-    Calculates the arithmetic mean of a list.
-    :param lst: List of numeric elements.
-    :return: Arithmetic mean as a float.
-    """
     if not isinstance(lst, list):
         raise TypeError("Input must be a list.")
     if len(lst) == 0:
@@ -23,11 +13,6 @@ def mean(lst):
     return sum(lst) / len(lst)
 
 def range_of_list(lst):
-    """
-    Returns the difference between the max and min values in the list.
-    :param lst: List of numeric elements.
-    :return: Difference between max and min as a float or integer.
-    """
     if not isinstance(lst, list):
         raise TypeError("Input must be a list.")
     if len(lst) == 0:
@@ -37,11 +22,6 @@ def range_of_list(lst):
     return max(lst) - min(lst)
 
 def median(lst):
-    """
-    Calculates the median of a list.
-    :param lst: List of numeric elements.
-    :return: Median as a float or integer.
-    """
     if not isinstance(lst, list):
         raise TypeError("Input must be a list.")
     if len(lst) == 0:
@@ -57,11 +37,6 @@ def median(lst):
         return sorted_lst[mid]
 
 def standard_deviation(lst):
-    """
-    Calculates the standard deviation of a list.
-    :param lst: List of numeric elements.
-    :return: Standard deviation as a float.
-    """
     if not isinstance(lst, list):
         raise TypeError("Input must be a list.")
     if len(lst) == 0:
@@ -73,11 +48,6 @@ def standard_deviation(lst):
     return variance ** 0.5
 
 def list_statistics(lst):
-    """
-    Creates a dictionary with statistics of a list.
-    :param lst: List of numeric elements.
-    :return: Dictionary containing length, mean, range, median, and standard deviation.
-    """
     return {
         "length": length(lst),
         "mean": mean(lst),
